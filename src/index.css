@@ -1,0 +1,369 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+}
+
+.App{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    margin-bottom: 50px;
+  
+}
+
+.App_nav{
+    width: 100%;
+    height: 80px;
+    background: linear-gradient(90deg, #d8143b 0%, #071f96 100%);
+
+    position: absolute;
+}
+
+.App_logo{
+    color: #fff;
+}
+
+.App_logo > li {
+    position: absolute;
+    left: 80px;
+    top: 30px;
+    list-style-type: none;
+}
+
+/* .App_profile{
+    margin-right: 60px;
+    margin-top: 30px;
+    float: right;
+    width: 80px;
+    text-align: center;
+    list-style-type: none;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid white;
+}
+
+.App_download{
+    margin-right: 60px;
+    margin-top: 30px;
+    margin-left: 25px;
+    float: right;
+    width: 100px;
+    text-align: center;
+    list-style-type: none;
+    cursor: pointer;
+    border-radius: 12px;
+    border: 2px solid white;
+}
+
+.download_list{
+    position: relative;
+    top: 5px;
+}
+
+.download_downIcon{
+    font-size: 8px;
+    float: right; 
+}
+
+span:hover{
+    background: #4D5DF1;
+} */
+
+/* .profile_list{
+    position: relative;
+    top: 5px;
+}
+
+.profile_downIcon{
+    font-size: 8px;
+    float: right;
+} */
+
+.player{
+    display: block;
+    background: linear-gradient(90deg, #FDBB2D 0%, #3A1C71 100%);
+    margin: 0px auto;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    position: relative;
+    top: 30px;
+}
+
+.player > h3{
+    font-size: 14px;
+    color: white;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.player > p{
+    font-size: 14px;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+}
+
+.player > p > span{
+    font-weight: 400;
+    width: fit-content;
+    color: #fff;
+}
+
+.details > .details_img{
+    position: relative;
+    width: fit-content;
+    margin: 0 auto;
+}
+
+.details > .details_img > img {
+    display: block;
+    margin: 50px auto;
+    object-fit: contain;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 100px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.8), -6px -6px 12px rgba(255, 255, 255, 0.4);
+}
+
+.details > .details_img::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    bottom: -25px;
+    left: -25px;
+    border-radius: 50%;
+    box-shadow: 3px dashed rgba(190, 25, 25, 0.4);
+}
+
+.details > .details_title {
+    color: #eee;
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.details > .details_artist {
+    color: #aaa;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.control {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+
+
+}
+
+.control > .control_PlayButton {
+    display: flex;
+    margin: 0 30px;
+    padding: 20px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ffce00;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+.control > .control_PlayButton:hover {
+    background: #522F68;
+}
+
+.control > .control_skipButton{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 18px;
+}
+
+.control_shufButton{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #000;
+    font-size: 14px;
+    position: relative;
+    right: 15px;
+}
+
+.control_repeatButton{
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #000;
+    
+    position: relative;
+    left: 15px;
+    
+}
+.control_repeatButton>svg{
+    font-size: 15px;
+}
+
+audio{
+    opacity: 0.4;
+    outline-width: 0;
+    margin-bottom: 5px;
+    margin-top: -20px;
+    
+}
+
+audio::-webkit-media-controls-play-button {
+    display: none;
+}
+
+audio::-webkit-media-controls-volume-slider {
+    transform: rotate(-90deg);
+    position: relative;
+    left: 25px;
+}
+
+audio::-webkit-media-controls-panel {
+    background: #ffce00;
+   
+    
+}
+
+audio::-webkit-media-controls-timeline {
+    color: #FC466B;
+}
+
+/* Navbar css */
+
+
+
+  
+  
+  /* Atom Hover Button */
+  :root {
+      --bg: #3C465C;
+      --primary: white;
+      --solid: #575BE8;
+      --btn-w: 10em;
+      --dot-w: calc(var(--btn-w)*.2);
+      --tr-X: calc(var(--btn-w) - var(--btn-w)*.2);
+  }
+  * {box-sizing: border-box;}
+  *:before, *:after {box-sizing: border-box;}
+  
+  
+  
+  
+  
+  .top_btn {
+      float: right;
+      position: relative;
+      margin: 15px;
+      width: var(--btn-w);
+      color: var(--primary);
+      border: .15em solid var(--primary);
+      border-radius: 5em;
+      text-transform: uppercase;
+      text-align: center;
+      font-size: 1em;
+      line-height: 2em;
+      cursor: pointer;	
+  }
+
+  .top_btn:hover{
+    color: #3F5EFB;  
+    border: .15em solid #3F5EFB;
+  }
+  
+  .dot {
+      content: '';
+      position: absolute;
+      top: 0;
+      width: var(--dot-w);
+      height: 100%;
+      border-radius: 100%;
+      transition: all 300ms ease;
+      display: none;
+  }
+  .dot:after {
+      content: '';
+      position: absolute;
+      left: calc(50% - .4em);
+      top: -.4em;
+      height: .8em;
+      width: .8em;
+      background: var(--primary);
+      border-radius: 1em;
+      border: .25em solid var(--solid);
+      box-shadow: 0 0 .7em var(--solid),
+                  0 0 2em var(--primary);
+  }
+  .top_btn:hover .dot,
+  .top_btn:focus .dot {
+      animation: atom 2s infinite linear;
+      display: block;
+  }
+  @keyframes atom {
+      0% {transform: translateX(0) rotate(0);}
+      30%{transform: translateX(var(--tr-X)) rotate(0);}
+      50% {transform: translateX(var(--tr-X)) rotate(180deg);}
+      80% {transform: translateX(0) rotate(180deg);}
+      100% {transform: translateX(0) rotate(360deg);}
+  }
+
+  .btn_icon{
+      position: relative;
+      top: 5px;
+      left: 5px;
+      
+  }
+  
+  
+  
+  /* END Atom Hover Button */
+  
+  
+  /* END mButton            */
+
+  /* scroll css */
+ /* width */
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px grey; 
+    
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #ffce00;
+     
+   
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #522F68; 
+
+  }
